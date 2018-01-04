@@ -1,0 +1,5 @@
+// @flow
+
+declare module 'css-module' {
+  declare module.exports: { [key: string]: string };
+}

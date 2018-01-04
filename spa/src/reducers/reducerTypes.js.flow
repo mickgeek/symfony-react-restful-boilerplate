@@ -1,0 +1,61 @@
+// @flow
+
+import type { Identity } from '../utils/userHelper';
+
+export type AppState = {
+  +errorCode: number | null,
+  +notifications: {| +tag: string, +message: string, +redirect: boolean |}[],
+};
+
+export type UserState = {
+  +identity: Identity,
+  +account: {|
+    +attributes: {
+      +id?: number,
+      +email?: string,
+      +role?: number,
+      +status?: number,
+      +createdAt?: Date,
+      +lastLoginAt?: Date,
+    },
+    +updatedAt: Date | null,
+  |},
+  +token: {|
+    +attributes: { +isUsed?: boolean, +isExpired?: boolean },
+    +message: string | null,
+    +updatedAt: Date | null,
+  |},
+  +list: {|
+    +items: {
+      +id: number,
+      +email: string,
+      +role: number,
+      +status: number,
+    }[],
+    +message: string | null,
+    +updatedAt: Date | null,
+  |},
+  +details: {|
+    +attributes: {
+      +id?: number,
+      +email?: string,
+      +role?: number,
+      +status?: number,
+      +createdAt?: Date,
+      +updatedAt?: Date | null,
+      +lastLoginAt?: Date | null,
+    },
+    +message: string | null,
+    +updatedAt: Date | null,
+  |},
+  +loginForm: {| +errors: { [key: string]: string | string[] } |},
+  +passwordResetRequestForm: {| +errors: { [key: string]: string | string[] }, +reset: boolean |},
+  +passwordResetForm: {| +errors: { [key: string]: string | string[] } |},
+  +registrationForm: {| +errors: { [key: string]: string | string[] }, +reset: boolean |},
+  +passwordChangeForm: {| +errors: { [key: string]: string | string[] }, +reset: boolean |},
+  +emailChangeForm: {| +errors: { [key: string]: string | string[] }, +reset: boolean |},
+  +backendUserCreationForm: {| +errors: { [key: string]: string | string[] } |},
+  +backendUserUpdatingForm: {| +errors: { [key: string]: string | string[] } |},
+};
+
+export type RootState = {| +app: AppState, +user: UserState |};

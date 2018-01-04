@@ -1,0 +1,146 @@
+// @flow
+
+export type AppErrorCodeUpdatingAction = {| type: 'APP_ERROR_CODE_UPDATE', +code: number |};
+
+export type AppNotificationAddingAction = {|
+  type: 'APP_NOTIFICATIONS_ADD',
+  +tag: string,
+  +message: string,
+  +redirect: boolean,
+|};
+
+export type AppNotificationRemovingAction = {| type: 'APP_NOTIFICATIONS_REMOVE', +index: number |};
+
+export type AppAction =
+  | AppErrorCodeUpdatingAction
+  | AppNotificationAddingAction
+  | AppNotificationRemovingAction;
+
+export type AppActionCreators = {| +updateErrorCode: Function, +removeNotification: Function |};
+
+export type UserIdentityUpdatingAction = {| type: 'USER_IDENTITY_UPDATE', +token: string | null |};
+
+export type UserAccountUpdatingAction = {|
+  type: 'USER_ACCOUNT_UPDATE',
+  +attributes: {
+    +id: number,
+    +email: string,
+    +role: number,
+    +status: number,
+    +createdAt: Date,
+    +lastLoginAt: Date,
+  },
+|};
+
+export type UserTokenUpdatingAction = {|
+  type: 'USER_TOKEN_UPDATE',
+  +attributes: { +isUsed?: boolean, +isExpired?: boolean },
+  +message: string | null,
+|};
+
+export type UserListUpdatingAction = {|
+  type: 'USER_LIST_UPDATE',
+  +items: {
+    +id: number,
+    +email: string,
+    +role: number,
+    +status: number,
+  }[],
+  +message: string | null,
+|};
+
+export type UserDetailsUpdatingAction = {|
+  type: 'USER_DETAILS_UPDATE',
+  +attributes: {
+    +id?: number,
+    +email?: string,
+    +role?: number,
+    +status?: number,
+    +createdAt?: Date,
+    +updatedAt?: Date | null,
+    +lastLoginAt?: Date | null,
+  },
+  +message: string | null,
+|};
+
+export type LoginFormUpdatingAction = {|
+  type: 'LOGIN_FORM_UPDATE',
+  +errors: { [key: string]: string | Array<string> },
+|};
+
+export type PasswordResetRequestFormUpdatingAction = {|
+  type: 'PASSWORD_RESET_REQUEST_FORM_UPDATE',
+  +errors: { [key: string]: string | Array<string> },
+  +reset: boolean,
+|};
+
+export type PasswordResetFormUpdatingAction = {|
+  type: 'PASSWORD_RESET_FORM_UPDATE',
+  +errors: { [key: string]: string | Array<string> },
+|};
+
+export type RegistrationFormUpdatingAction = {|
+  type: 'REGISTRATION_FORM_UPDATE',
+  +errors: { [key: string]: string | Array<string> },
+  +reset: boolean,
+|};
+
+export type PasswordChangeFormUpdatingAction = {|
+  type: 'PASSWORD_CHANGE_FORM_UPDATE',
+  +errors: { [key: string]: string | Array<string> },
+  +reset: boolean,
+|};
+
+export type EmailChangeFormUpdatingAction = {|
+  type: 'EMAIL_CHANGE_FORM_UPDATE',
+  +errors: { [key: string]: string | Array<string> },
+  +reset: boolean,
+|};
+
+export type BackendUserCreationFormUpdatingAction = {|
+  type: 'BACKEND_USER_CREATION_FORM_UPDATE',
+  +errors: { [key: string]: string | Array<string> },
+|};
+
+export type BackendUserUpdatingFormUpdatingAction = {|
+  type: 'BACKEND_USER_UPDATING_FORM_UPDATE',
+  +errors: { [key: string]: string | Array<string> },
+|};
+
+export type UserAction =
+  | UserIdentityUpdatingAction
+  | UserAccountUpdatingAction
+  | UserTokenUpdatingAction
+  | UserListUpdatingAction
+  | UserDetailsUpdatingAction
+  | LoginFormUpdatingAction
+  | PasswordResetRequestFormUpdatingAction
+  | PasswordResetFormUpdatingAction
+  | RegistrationFormUpdatingAction
+  | PasswordChangeFormUpdatingAction
+  | EmailChangeFormUpdatingAction
+  | BackendUserCreationFormUpdatingAction
+  | BackendUserUpdatingFormUpdatingAction;
+
+export type UserActionCreators = {|
+  +logIn: Function,
+  +logOut: Function,
+
+  +register: Function,
+  +view: Function,
+  +viewOne: Function,
+
+  +viewAccount: Function,
+  +changePassword: Function,
+
+  +requestPasswordReset: Function,
+  +changeEmail: Function,
+  +viewToken: Function,
+  +confirmAccountActivation: Function,
+  +resetPassword: Function,
+  +confirmEmailChange: Function,
+
+  +backendCreate: Function,
+  +backendUpdate: Function,
+  +backendDestroy: Function,
+|};

@@ -1,0 +1,11 @@
+# packages
+/node_modules/
+/flow-typed/
+
+# logs
+/yarn-error.log
+/yarn-debug.log
+/npm-debug.log
+
+# build
+/public/build/
