@@ -1,6 +1,6 @@
 # Symfony-React RESTful Boilerplate
 
-A boilerplate with two separated applications: API (created through the Symfony 4 PHP framework) and SPA (the React JavaScript library respectively).
+A boilerplate with two separated applications: RESTful API (created through the Symfony 4 PHP framework) and SPA (the React JavaScript library respectively).
 It contains a user implementation with advanced functions suitable for most projects. The following features are included:
 
 - JWT authentication
@@ -13,7 +13,7 @@ Try [a demo](http://restfulboilerplate.olegbelostotsky.com) with `admin@example.
 
 The main components of the Symfony part:
 
-- Annotations (Framework Extra)
+- Annotations (FrameworkExtraBundle)
 - Doctrine
 - Doctrine Migrations
 

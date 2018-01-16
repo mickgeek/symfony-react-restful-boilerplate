@@ -18,8 +18,6 @@ class UniqueUserEmailValidator extends ConstraintValidator
     public function __construct(UserRepository $repository)
     {
         $this->repository = $repository;
-
-        parent::__construct();
     }
 
     /**

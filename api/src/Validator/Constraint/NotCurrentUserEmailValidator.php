@@ -19,8 +19,6 @@ class NotCurrentUserEmailValidator extends ConstraintValidator
     public function __construct(TokenStorageInterface $tokenStorage)
     {
         $this->tokenStorage = $tokenStorage;
-
-        parent::__construct();
     }
 
     /**
