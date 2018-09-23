@@ -188,7 +188,7 @@ class UserTokenController
         }
 
         $user = $token->getUser();
-        $user->updateErrorCode(User::STATUS_ACTIVE);
+        $user->setStatus(User::STATUS_ACTIVE);
         $this->userRepository->save($user);
         $token->setUsedAt(new DateTimeImmutable());
         $this->tokenRepository->save($token);
