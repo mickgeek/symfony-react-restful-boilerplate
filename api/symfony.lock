@@ -134,6 +134,9 @@
     "symfony/cache": {
         "version": "v4.0.2"
     },
+    "symfony/cache-contracts": {
+        "version": "v1.1.7"
+    },
     "symfony/config": {
         "version": "v4.0.2"
     },
@@ -206,6 +209,9 @@
     "symfony/lts": {
         "version": "4-dev"
     },
+    "symfony/mime": {
+        "version": "v4.4.1"
+    },
     "symfony/monolog-bridge": {
         "version": "v4.0.2"
     },
@@ -224,8 +230,14 @@
     "symfony/polyfill-intl-icu": {
         "version": "v1.6.0"
     },
+    "symfony/polyfill-intl-idn": {
+        "version": "v1.13.1"
+    },
     "symfony/polyfill-mbstring": {
         "version": "v1.6.0"
+    },
+    "symfony/polyfill-php72": {
+        "version": "v1.13.1"
     },
     "symfony/property-access": {
         "version": "v4.0.2"
@@ -250,6 +262,9 @@
             "version": "3.3",
             "ref": "85834af1496735f28d831489d12ab1921a875e0d"
         }
+    },
+    "symfony/service-contracts": {
+        "version": "v1.1.8"
     },
     "symfony/swiftmailer-bundle": {
         "version": "2.5",
@@ -289,6 +304,9 @@
     },
     "symfony/validator": {
         "version": "v4.0.2"
+    },
+    "symfony/var-exporter": {
+        "version": "v4.4.1"
     },
     "symfony/yaml": {
         "version": "v4.0.2"
