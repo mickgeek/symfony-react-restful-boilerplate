@@ -9,8 +9,6 @@ It contains a user implementation with advanced functions suitable for most proj
 - Confirmation via email (password reset, account activation, email change)
 - Administrative interface
 
-Try [a demo](http://restfulboilerplate.olegbelostotsky.com) with `admin@example.com`/`admin` as credentials. The admin panel is available by the `/admin` route.
-
 The main components of the Symfony part:
 
 - Annotations (FrameworkExtraBundle)
