@@ -34,10 +34,9 @@ The main components of the React part:
 composer install
 ```
 2. Configure parameters in the `config/packages/doctrine.yaml` and `.env` files according to your needs.
-3. Generate secret keys for JWT (a pass phrase should be match the `JWT_PASSPHRASE` parameter from your `.env` file):
+3. Generate secret keys for JWT:
 ```bash
-openssl genrsa -out config/jwt/private.pem -aes256 4096
-openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem
+php bin/console lexik:jwt:generate-keypair
 ```
 4. Create the database:
 ```bash
